@@ -735,7 +735,6 @@ const CardContainer = () => {
 const RestoCards = (restoData) => {
   console.log(restoData);
   const {
-    id,
     name,
     cloudinaryImageId,
     cuisines,
@@ -760,7 +759,9 @@ const RestoCards = (restoData) => {
           <h4 className="restoTitle">
             <p>{name}</p>
           </h4>
-          <p className="restoCuisine"></p>
+          <p className="restoCuisine">
+            {(cuisines, locality, avgRating, deliveryTime)}
+          </p>
           <div className="restoStats"></div>
         </div>
       </div>
